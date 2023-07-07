@@ -241,7 +241,7 @@ def line_monitor(game, cla):
                 line_to_me("two", ms_)
 
             # 화면
-            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\monitor\\nightcrows_title.PNG"
+            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\monitor\\nightcrow_title.PNG"
             img_array = np.fromfile(full_path, np.uint8)
             img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
             imgs_ = imgs_set(0, 0, 960, 1030, cla, img)
