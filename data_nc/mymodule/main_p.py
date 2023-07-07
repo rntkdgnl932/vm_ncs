@@ -128,7 +128,7 @@ class MyApp(QDialog):
         # 풀버젼
         # pyinstaller --hidden-import PyQt5 --hidden-import requests --hidden-import chardet --add-data="C:\\my_games\\nightcrows\\data_nc;./data_nc" -i="nightcrows.ico" --add-data="nightcrows.ico;./" --icon="nightcrows.ico" --paths "C:\Users\1_S_3\AppData\Local\Programs\Python\Python311\Lib\site-packages\cv2" main.py
         # 업데이트버젼
-        # pyinstaller --hidden-import PyQt5 --hidden-import requests --hidden-import chardet -i="nightcrows.ico" --add-data="nightcrows.ico;./" --icon="nightcrows.ico" --paths "C:\Users\1_S_3\AppData\Local\Programs\Python\Python311\Lib\site-packages\cv2" main.py
+        # pyinstaller --hidden-import PyQt5 --hidden-import requests --hidden-import chardet -i="nightcrow.ico" --add-data="nightcrow.ico;./" --icon="nightcrow.ico" --paths "C:\Users\1_S_3\AppData\Local\Programs\Python\Python311\Lib\site-packages\cv2" main.py
 
         self.setGeometry(1000, 300, 900, 600)
         self.show()

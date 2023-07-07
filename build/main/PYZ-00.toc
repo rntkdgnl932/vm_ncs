@@ -1,4 +1,4 @@
-('C:\\my_games\\nightcrow\\build\\main\\PYZ-00.pyz',
+('C:\\my_games\\nightcrows\\build\\main\\PYZ-00.pyz',
  [('PIL',
    'C:\\Users\\1_S_3\\AppData\\Roaming\\Python\\Python311\\site-packages\\PIL\\__init__.py',
    'PYMODULE'),
