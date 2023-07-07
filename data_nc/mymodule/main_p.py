@@ -2760,7 +2760,7 @@ class game_Playing(QThread):
                 else:
                     print("touching 없")
 
-                    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrows_start_ready.PNG"
+                    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrow_start_ready.PNG"
                     img_array = np.fromfile(full_path, np.uint8)
                     img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
                     imgs_ = imgs_set_(0, 0, 960, 1030, v_.now_cla, img, 0.8)
