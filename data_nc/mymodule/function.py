@@ -277,41 +277,39 @@ def mouse_move(x, y):
 
 def click_pos_2(pos_1, pos_2, cla):
     try:
-        try:
-            import pyautogui
+        import pyautogui
+        coordinate = 0
+        if cla == 'one':
             coordinate = 0
-            if cla == 'one':
-                coordinate = 0
-            if cla == 'two':
-                coordinate = 960
+        if cla == 'two':
+            coordinate = 960
 
-            xy_ = pyautogui.position()
+        xy_ = pyautogui.position()
 
-            k_ = random_int()
-            if k_ == 1 or k_ == 2:
-                x_ = xy_[0] + random_int_2()
-            if k_ == 3 or k_ == 4:
-                x_ = -xy_[0] - random_int_2()
-                if x_ < 0:
-                    x_ = 0
-            k_ = random_int()
-            if k_ == 1 or k_ == 2:
-                abc = 0.3
-                y_ = xy_[1] + random_int_2()
-            if k_ == 3 or k_ == 4:
-                abc = 0.4
-                y_ = -xy_[1] - random_int_2()
-                if y_ < 0:
-                    y_ = 0
+        k_ = random_int()
+        if k_ == 1 or k_ == 2:
+            x_ = xy_[0] + random_int_2()
+        if k_ == 3 or k_ == 4:
+            x_ = -xy_[0] - random_int_2()
+            if x_ < 0:
+                x_ = 0
+        k_ = random_int()
+        if k_ == 1 or k_ == 2:
+            abc = 0.3
+            y_ = xy_[1] + random_int_2()
+        if k_ == 3 or k_ == 4:
+            abc = 0.4
+            y_ = -xy_[1] - random_int_2()
+            if y_ < 0:
+                y_ = 0
 
-            pyautogui.moveTo(pos_1 + random_int() + coordinate, pos_2 + random_int())
-            # time.sleep(0.2)
-            # pyautogui.click()
-            pyautogui.click(pos_1 + random_int() + coordinate, pos_2 + random_int())
-            time.sleep(0.5)
-        except Exception as e:
-            print(e)
-
+        pyautogui.moveTo(pos_1 + random_int() + coordinate, pos_2 + random_int())
+        # time.sleep(0.2)
+        # pyautogui.click()
+        pyautogui.click(pos_1 + random_int() + coordinate, pos_2 + random_int())
+        time.sleep(0.5)
+    except Exception as e:
+        print(e)
 
 def click_pos_reg(pos_1, pos_2, cla):
     try:
