@@ -457,7 +457,7 @@ class SecondTab(QWidget):
 
     def win_left(self):
         print("왼쪽으로 정렬 합니다.")
-        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrows_title.PNG"
+        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrow_title.PNG"
         img_array = np.fromfile(full_path, np.uint8)
         img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
         imgs_ = imgs_set_(0, 0, 960, 1080, "one", img, 0.8)
@@ -471,7 +471,7 @@ class SecondTab(QWidget):
             pyautogui.press('left')
             pyautogui.keyUp('win')
             time.sleep(0.3)
-            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrows_title.PNG"
+            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrow_title.PNG"
             img_array = np.fromfile(full_path, np.uint8)
             img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
             imgs_ = imgs_set_(0, 0, 960, 1080, "one", img, 0.8)
@@ -481,7 +481,7 @@ class SecondTab(QWidget):
 
     def win_right(self):
         print("오른쪽으로 정렬 합니다.")
-        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrows_title.PNG"
+        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrow_title.PNG"
         img_array = np.fromfile(full_path, np.uint8)
         img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
         imgs_ = imgs_set_(960, 0, 1920, 1080, "one", img, 0.8)
@@ -494,7 +494,7 @@ class SecondTab(QWidget):
             pyautogui.press('right')
             pyautogui.keyUp('win')
             time.sleep(0.3)
-            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrows_title.PNG"
+            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\nightcrow_title.PNG"
             img_array = np.fromfile(full_path, np.uint8)
             img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
             imgs_ = imgs_set_(960, 0, 1920, 1080, "one", img, 0.8)
