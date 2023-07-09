@@ -1044,19 +1044,39 @@ def juljun_attack(cla, dun_, nowstep):
                             img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
                             imgs_ = imgs_set_(450, 640, 540, 710, cla, img, 0.9)
                             if imgs_ is not None and imgs_ != False:
-                                print("동굴 사냥중인듯 하다")
+                                print("동굴 사냥중인듯 하다", imgs_)
                             else:
-                                in_maul_ = True
-                                print("사냥중이지 않다. 다시 체크해보자", imgs_)
-                                drag_pos(360, 550, 600, 550, cla)
-                                time.sleep(1)
-                                full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\y_1.PNG"
+                                full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\juljun_mode.PNG"
                                 img_array = np.fromfile(full_path, np.uint8)
                                 img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                imgs_ = imgs_set_(300, 400, 800, 800, cla, img, 0.9)
+                                imgs_ = imgs_set_(400, 120, 600, 160, cla, img, 0.8)
                                 if imgs_ is not None and imgs_ != False:
-                                    click_pos_reg(imgs_.x, imgs_.y, cla)
+                                    print("juljun_mode", imgs_)
+                                    in_maul_ = True
+                                    print("사냥중이지 않다. 다시 체크해보자")
+                                    drag_pos(360, 550, 600, 550, cla)
+                                    time.sleep(1)
+                                    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\y_1.PNG"
+                                    img_array = np.fromfile(full_path, np.uint8)
+                                    img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                    imgs_ = imgs_set_(300, 400, 800, 800, cla, img, 0.9)
+                                    if imgs_ is not None and imgs_ != False:
+                                        click_pos_reg(imgs_.x, imgs_.y, cla)
 
+                                else:
+                                    print("공격 당하는 듯 하다. 이동해버리자")
+                                    # full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\dongool_1.PNG"
+                                    # img_array = np.fromfile(full_path, np.uint8)
+                                    # img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                    # imgs_ = imgs_set_(30, 75, 200, 110, cla, img, 0.75)
+                                    # if imgs_ is not None and imgs_ != False:
+                                    #     full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\random_move_1.PNG"
+                                    #     img_array = np.fromfile(full_path, np.uint8)
+                                    #     img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                    #     imgs_ = imgs_set_(250, 960, 420, 1030, cla, img, 0.8)
+                                    #     if imgs_ is not None and imgs_ != False:
+                                    #         print("동굴던전 : 랜덤이동 보여서 클릭")
+                                    #         click_pos_reg(imgs_.x, imgs_.y, cla)
                 if in_maul_ == True:
                     print("절전모드 잠시 중지...")
                     continue_juljun = True
@@ -1497,6 +1517,12 @@ def juljun_attack(cla, dun_, nowstep):
                                                 juljun_ready_count += 1
                                                 if juljun_ready_count > 10:
                                                     juljun_ready = True
+
+                                                # full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\dongool_1.PNG"
+                                                # img_array = np.fromfile(full_path, np.uint8)
+                                                # img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                                # imgs_ = imgs_set_(30, 75, 200, 110, cla, img, 0.75)
+                                                # if imgs_ is not None and imgs_ != False:
 
                                                 full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\" + dungeon_name + ".PNG"
                                                 img_array = np.fromfile(full_path, np.uint8)
