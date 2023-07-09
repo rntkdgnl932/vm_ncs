@@ -2117,7 +2117,7 @@ def character_change(cla, character_id):
                                     cha_select = True
                                     in_game = True
 
-                                    # 현재 진입한 캐릭터 번호(id) 
+                                    # 현재 진입한 캐릭터 번호(id)
 
                                     dir_path = "C:\\my_games\\nightcrows"
                                     if cla == 'one':
