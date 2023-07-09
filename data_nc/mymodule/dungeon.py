@@ -1506,134 +1506,148 @@ def juljun_attack(cla, dun_, nowstep):
 
 
                                             else:
-                                                print("동굴던전 : 랜덤이동 보여서 클릭 후 다시 절전모드 클릭")
-                                                click_pos_2(345, 995, cla)
+                                                print("동굴던전 : 랜덤이동 보이면 클릭")
                                             #이동 했으면 다시 사냥 시작 후 절전모드 하기
-                                            time.sleep(0.1)
+                                            time.sleep(0.2)
+                                            if fast_random_move_ == True:
+                                                juljun_ready = False
+                                                juljun_ready_count = 0
+                                                while juljun_ready is False:
+                                                    juljun_ready_count += 1
+                                                    if juljun_ready_count > 10:
+                                                        juljun_ready = True
 
-                                            juljun_ready = False
-                                            juljun_ready_count = 0
-                                            while juljun_ready is False:
-                                                juljun_ready_count += 1
-                                                if juljun_ready_count > 10:
-                                                    juljun_ready = True
+                                                    # full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\dongool_1.PNG"
+                                                    # img_array = np.fromfile(full_path, np.uint8)
+                                                    # img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                                    # imgs_ = imgs_set_(30, 75, 200, 110, cla, img, 0.75)
+                                                    # if imgs_ is not None and imgs_ != False:
 
-                                                # full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\dongool_1.PNG"
-                                                # img_array = np.fromfile(full_path, np.uint8)
-                                                # img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                # imgs_ = imgs_set_(30, 75, 200, 110, cla, img, 0.75)
-                                                # if imgs_ is not None and imgs_ != False:
-
-                                                full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\" + dungeon_name + ".PNG"
-                                                img_array = np.fromfile(full_path, np.uint8)
-                                                img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                imgs_ = imgs_set_(30, 75, 200, 110, cla, img, 0.75)
-                                                if imgs_ is not None and imgs_ != False:
-                                                    print("동굴 절전모드에서 진행중")
-                                                    print(dun_, imgs_)
-                                                    # 공격하기
-
-                                                    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\hunting_1.PNG"
+                                                    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\" + dungeon_name + ".PNG"
                                                     img_array = np.fromfile(full_path, np.uint8)
                                                     img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                    imgs_ = imgs_set_(400, 850, 600, 900, cla, img, 0.8)
+                                                    imgs_ = imgs_set_(30, 75, 200, 110, cla, img, 0.75)
                                                     if imgs_ is not None and imgs_ != False:
-                                                        print("hunting_1", imgs_)
-                                                        juljun_ready = True
-                                                    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\hunting_2.PNG"
-                                                    img_array = np.fromfile(full_path, np.uint8)
-                                                    img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                    imgs_ = imgs_set_(400, 850, 600, 900, cla, img, 0.8)
-                                                    if imgs_ is not None and imgs_ != False:
-                                                        print("hunting_2", imgs_)
-                                                        juljun_ready = True
-                                                    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\hunting_3.PNG"
-                                                    img_array = np.fromfile(full_path, np.uint8)
-                                                    img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                    imgs_ = imgs_set_(400, 850, 600, 900, cla, img, 0.8)
-                                                    if imgs_ is not None and imgs_ != False:
-                                                        print("hunting_3", imgs_)
-                                                        juljun_ready = True
+                                                        print("동굴 절전모드에서 진행중")
+                                                        print(dun_, imgs_)
+                                                        # 공격하기
 
-                                                    if juljun_ready == False:
-                                                        # 가방 닫기
-                                                        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\pvp_1.PNG"
+                                                        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\hunting_1.PNG"
                                                         img_array = np.fromfile(full_path, np.uint8)
                                                         img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                        imgs_ = imgs_set_(900, 275, 960, 365, cla, img, 0.8)
+                                                        imgs_ = imgs_set_(400, 850, 600, 900, cla, img, 0.8)
                                                         if imgs_ is not None and imgs_ != False:
-                                                            print("menu_open 되어있음", imgs_)
-                                                            click_pos_2(930, 60, cla)
-                                                            time.sleep(0.1)
-                                                        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\clean_screen\\gabang_title.PNG"
+                                                            print("hunting_1", imgs_)
+                                                            juljun_ready = True
+                                                        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\hunting_2.PNG"
                                                         img_array = np.fromfile(full_path, np.uint8)
                                                         img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                        imgs_ = imgs_set_(820, 80, 910, 120, cla, img, 0.83)
+                                                        imgs_ = imgs_set_(400, 850, 600, 900, cla, img, 0.8)
                                                         if imgs_ is not None and imgs_ != False:
-                                                            click_pos_2(935, 100, cla)
-                                                            time.sleep(0.1)
-                                                        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\pvp_1.PNG"
+                                                            print("hunting_2", imgs_)
+                                                            juljun_ready = True
+                                                        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\hunting_3.PNG"
                                                         img_array = np.fromfile(full_path, np.uint8)
                                                         img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                        imgs_ = imgs_set_(900, 275, 960, 365, cla, img, 0.8)
+                                                        imgs_ = imgs_set_(400, 850, 600, 900, cla, img, 0.8)
                                                         if imgs_ is not None and imgs_ != False:
-                                                            print("menu_open 되어있음", imgs_)
-                                                            click_pos_2(930, 60, cla)
-                                                            time.sleep(0.1)
+                                                            print("hunting_3", imgs_)
+                                                            juljun_ready = True
+
+                                                        if juljun_ready == False:
+                                                            # 가방 닫기
+                                                            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\pvp_1.PNG"
+                                                            img_array = np.fromfile(full_path, np.uint8)
+                                                            img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                                            imgs_ = imgs_set_(900, 275, 960, 365, cla, img, 0.8)
+                                                            if imgs_ is not None and imgs_ != False:
+                                                                print("menu_open 되어있음", imgs_)
+                                                                click_pos_2(930, 60, cla)
+                                                                time.sleep(0.1)
+                                                            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\clean_screen\\gabang_title.PNG"
+                                                            img_array = np.fromfile(full_path, np.uint8)
+                                                            img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                                            imgs_ = imgs_set_(820, 80, 910, 120, cla, img, 0.83)
+                                                            if imgs_ is not None and imgs_ != False:
+                                                                click_pos_2(935, 100, cla)
+                                                                time.sleep(0.1)
+                                                            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\pvp_1.PNG"
+                                                            img_array = np.fromfile(full_path, np.uint8)
+                                                            img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                                            imgs_ = imgs_set_(900, 275, 960, 365, cla, img, 0.8)
+                                                            if imgs_ is not None and imgs_ != False:
+                                                                print("menu_open 되어있음", imgs_)
+                                                                click_pos_2(930, 60, cla)
+                                                                time.sleep(0.1)
 
 
-                                                        juljun_ready = True
-                                                        print("동굴던전 : 공격하기 클릭후 절전모드 진입")
-                                                        click_pos_2(930, 850, cla)
-                                                        time.sleep(1)
-                                                        # 절전모드로 다시 진입하기
-                                                        click_pos_2(25, 970, cla)
+                                                            juljun_ready = True
+                                                            print("동굴던전 : 공격하기 클릭후 절전모드 진입")
+                                                            click_pos_2(930, 850, cla)
+                                                            time.sleep(1)
+                                                            # 절전모드로 다시 진입하기
+                                                            click_pos_2(25, 970, cla)
+                                                        else:
+                                                            # 절전모드로 다시 진입하기
+                                                            print("동굴던전 : 공격중이라 절전모드 바로 진입")
+                                                            click_pos_2(25, 970, cla)
                                                     else:
-                                                        # 절전모드로 다시 진입하기
-                                                        print("동굴던전 : 공격중이라 절전모드 바로 진입")
-                                                        click_pos_2(25, 970, cla)
-                                                else:
-                                                    # 마을인지 보기
-                                                    print("마을인지 파악")
+                                                        # 마을인지 보기
+                                                        print("마을인지 파악")
 
-                                                    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\character_start\\y_.PNG"
+                                                        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\gujum.PNG"
+                                                        img_array = np.fromfile(full_path, np.uint8)
+                                                        img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                                        imgs_ = imgs_set_(450, 640, 490, 670, cla, img, 0.9)
+                                                        if imgs_ is not None and imgs_ != False:
+                                                            in_maul_ = True
+                                                            print("거점이다. 동굴 끝난듯 하다.", imgs_)
+                                                            drag_pos(360, 550, 600, 550, cla)
+                                                            time.sleep(1)
+                                                            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\\y_1.PNG"
+                                                            img_array = np.fromfile(full_path, np.uint8)
+                                                            img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                                            imgs_ = imgs_set_(300, 400, 800, 800, cla, img, 0.9)
+                                                            if imgs_ is not None and imgs_ != False:
+                                                                click_pos_reg(imgs_.x, imgs_.y, cla)
+                                                                time.sleep(1)
+
+                                                        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\character_start\\y_.PNG"
+                                                        img_array = np.fromfile(full_path, np.uint8)
+                                                        img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
+                                                        imgs_ = imgs_set_(0, 0, 960, 1030, cla, img, 0.8)
+                                                        if imgs_ is not None and imgs_ != False:
+                                                            click_pos_reg(imgs_.x, imgs_.y, cla)
+                                                            time.sleep(0.3)
+
+                                                        result_maul_in = in_maul_check(cla)
+                                                        if result_maul_in == True:
+                                                            juljun_ready = True
+                                                            continue_juljun = True
+                                                            in_dungeon__ = True
+                                                last_juljun = False
+                                                last_juljun_count = 0
+                                                while last_juljun is False:
+                                                    last_juljun_count += 1
+                                                    if last_juljun_count > 10:
+                                                        last_juljun = True
+                                                        continue_juljun = True
+                                                        line_to_me(cla, "동굴던전 진입 오류")
+                                                        clean_screen(cla)
+                                                    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\juljun_mode.PNG"
                                                     img_array = np.fromfile(full_path, np.uint8)
                                                     img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                    imgs_ = imgs_set_(0, 0, 960, 1030, cla, img, 0.8)
+                                                    imgs_ = imgs_set_(400, 120, 600, 160, cla, img, 0.8)
                                                     if imgs_ is not None and imgs_ != False:
-                                                        click_pos_reg(imgs_.x, imgs_.y, cla)
-                                                        time.sleep(0.3)
-
-                                                    result_maul_in = in_maul_check(cla)
-                                                    if result_maul_in == True:
-                                                        juljun_ready = True
-                                                        continue_juljun = True
-                                                        fast_random_move_ = True
-                                                        in_dungeon__ = True
-                                            last_juljun = False
-                                            last_juljun_count = 0
-                                            while last_juljun is False:
-                                                last_juljun_count += 1
-                                                if last_juljun_count > 10:
-                                                    last_juljun = True
-                                                    continue_juljun = True
-                                                    line_to_me(cla, "동굴던전 진입 오류")
-                                                    clean_screen(cla)
-                                                full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\dungeon\juljun_mode.PNG"
-                                                img_array = np.fromfile(full_path, np.uint8)
-                                                img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-                                                imgs_ = imgs_set_(400, 120, 600, 160, cla, img, 0.8)
-                                                if imgs_ is not None and imgs_ != False:
-                                                    last_juljun = True
-                                                else:
-                                                    print("절전 모드 진입중")
-                                                    result_maul_in = in_maul_check(cla)
-                                                    if result_maul_in == True:
-                                                        continue_juljun = True
-                                                        fast_random_move_ = True
-                                                        in_dungeon__ = True
                                                         last_juljun = True
-                                                time.sleep(0.2)
+                                                    else:
+                                                        print("절전 모드 진입중")
+                                                        result_maul_in = in_maul_check(cla)
+                                                        if result_maul_in == True:
+                                                            continue_juljun = True
+                                                            in_dungeon__ = True
+                                                            last_juljun = True
+                                                    time.sleep(0.2)
                             else:
                                 full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\maul_move_1.PNG"
                                 img_array = np.fromfile(full_path, np.uint8)
