@@ -44,7 +44,7 @@ def go_test():
 
     v_.what_cla = "one클라"
 
-    full_path = "c:\\my_games\\nightcrow\\data_nc\\imgs\\clean_screen\\exit_1.PNG"
+    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\clean_screen\\exit_1.PNG"
     img_array = np.fromfile(full_path, np.uint8)
     img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
     imgs_ = imgs_set_(800, 0, 960, 120, cla, img, 0.83)
