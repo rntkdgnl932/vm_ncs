@@ -73,10 +73,12 @@ def dead_die_before(cla):
         if imgs_ is not None and imgs_ != False:
             print("dead_die_2", imgs_)
 
-
+            v_.dongool_dead_count += 1
 
 
             if v_.force_sub_quest == False:
+
+
 
                 # 골드 파악후 50만 미만이면 강제로 서브퀘스트 실행
                 bag_open(cla)
