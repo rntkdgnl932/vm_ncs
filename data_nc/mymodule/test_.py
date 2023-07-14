@@ -42,14 +42,25 @@ def go_test():
 
     print("여긴 테스트")
 
-    v_.what_cla = "one클라"
-
-    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\clean_screen\\exit_1.PNG"
+    full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\check\\gold_g.PNG"
     img_array = np.fromfile(full_path, np.uint8)
     img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
-    imgs_ = imgs_set_(800, 0, 960, 120, cla, img, 0.83)
+    imgs_ = imgs_set_(800, 870, 840, 920, cla, img, 0.8)
     if imgs_ is not None and imgs_ != False:
-        print("exit_1", imgs_)
+        print("gold_g", imgs_)
+
+        # 가방 골드
+        if cla == "one":
+            x_reg = imgs_.x + 10
+        if cla == "two":
+            x_reg = imgs_.x + 10 - 960
+        if cla == "three":
+            x_reg = imgs_.x + 10 - 960 - 960
+
+        my_money = text_check_get(x_reg, 880, 892, 900, cla)
+        # my_money = text_check_get(830, 880, 892, 900, cla)
+
+        print("내 골드?", my_money)
 
 
 
