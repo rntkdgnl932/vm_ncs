@@ -25,14 +25,14 @@ def potion_check(cla):
         else:
             potion = v_.mypotion_2
 
-        full_path = "c:\\my_games\\nightcrow\\data_nc\\imgs\\potion\\out_potion.PNG"
+        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\potion\\out_potion.PNG"
         img_array = np.fromfile(full_path, np.uint8)
         img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
         imgs_ = imgs_set_(700, 950, 760, 1030, cla, img, 0.75)
         if imgs_ is not None and imgs_ != False:
             print("화면에 소형 물약 존재한다", imgs_)
             is_potion = True
-        full_path = "c:\\my_games\\nightcrow\\data_nc\\imgs\\potion\\out_big_potion_2.PNG"
+        full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\potion\\out_big_potion_2.PNG"
         img_array = np.fromfile(full_path, np.uint8)
         img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
         imgs_ = imgs_set_(700, 950, 760, 1030, cla, img, 0.75)
@@ -183,7 +183,7 @@ def potion_check(cla):
                         for i in range(10):
                             click_pos_2(935, 265, cla)
                             time.sleep(0.1)
-                            full_path = "c:\\my_games\\nightcrow\\data_nc\\imgs\\potion\\potion_in_bag.PNG"
+                            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\potion\\potion_in_bag.PNG"
                             img_array = np.fromfile(full_path, np.uint8)
                             img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
                             imgs_ = imgs_set_(670, 110, 900, 900, cla, img, 0.8)
@@ -191,7 +191,7 @@ def potion_check(cla):
                                 potion_have = True
                                 print("가방에 물약 존재한다", imgs_)
                                 break
-                            full_path = "c:\\my_games\\nightcrow\\data_nc\\imgs\\potion\\big_potion_in_bag2.PNG"
+                            full_path = "c:\\my_games\\nightcrows\\data_nc\\imgs\\potion\\big_potion_in_bag2.PNG"
                             img_array = np.fromfile(full_path, np.uint8)
                             img = cv2.imdecode(img_array, cv2.IMREAD_COLOR)
                             imgs_ = imgs_set_(670, 110, 900, 900, cla, img, 0.8)
